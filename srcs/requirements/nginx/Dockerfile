@@ -1,8 +1,11 @@
 FROM alpine:3.15
 
 RUN	set -ex; \
-	apk update && apk upgrade; \
-	apk add nginx openssl;
+	apk update && apk upgrade;
+
+RUN set -ex; \
+    apk add nginx openssl; \
+    mkdir -p /run/nginx;
 
 # SSL
 RUN		mkdir -p /etc/nginx/ssl
