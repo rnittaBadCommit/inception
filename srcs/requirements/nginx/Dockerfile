@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM debian:buster
 
 RUN	set -ex; \
 	apk update && apk upgrade;
